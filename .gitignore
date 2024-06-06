@@ -7,7 +7,6 @@ model
 results
 *.ply
 *.pyc
-*.png
 *.jpg
 *.mp4
 model
