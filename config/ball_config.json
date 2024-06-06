@@ -1,0 +1,34 @@
+{
+    "opacity_threshold": 0.02,
+    "rotation_degree": [0],
+    "rotation_axis": [0],
+    "substep_dt": 1e-4,
+    "frame_dt": 4e-2,
+    "frame_num": 50,
+    "nu": 0.4,
+    "E": 0.2,
+    "mu_N": 2,
+    "lam_N": 1,
+    "viscosity": 10,
+    "material": "jelly",
+    "density": 200,
+    "g": [0,0,-9.8],
+    "grid_v_damping_scale": 0.9999,
+    "rpic_damping": 0.0,
+    "boundary_conditions": [
+        {
+            "type": "bounding_box"
+        }
+    ],
+    "mpm_space_vertical_upward_axis": [0,0,1],
+    "mpm_space_viewpoint_center": [0.95,1.07,1],
+    "default_camera_index": 5,
+    "show_hint": false,
+    "init_azimuthm": -120,
+    "init_elevation": 5,
+    "init_radius": 4.11,
+    "move_camera": false,
+    "delta_a": 0.0,
+    "delta_e": 0.0,
+    "delta_r": 0.0
+}

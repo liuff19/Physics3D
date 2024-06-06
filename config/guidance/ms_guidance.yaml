@@ -1,0 +1,47 @@
+prompt_processor:
+  prompt: "a hamburger"
+  negative_prompt: ""
+  prompt_side: null
+  prompt_back: null
+  prompt_overhead: null
+
+  pretrained_model_name_or_path: "ali-vilab/text-to-video-ms-1.7b"
+  overhead_threshold: 60.0
+  front_threshold: 45.0
+  back_threshold: 45.0
+  view_dependent_prompt_front: False
+  use_cache: True
+  spawn: False
+
+  use_perp_neg: False
+  perp_neg_f_sb: [1, 0.5, -0.606]
+  perp_neg_f_fsb: [1, 0.5, 0.967]
+  perp_neg_f_fs: [4, 0.5, -2.426]
+  perp_neg_f_sf: [4, 0.5, -2.426]
+
+  use_prompt_debiasing: False
+  pretrained_model_name_or_path_prompt_debiasing: "bert-base-uncased"
+  prompt_debiasing_mask_ids: null
+
+guidance:
+  pretrained_model_name_or_path: "ali-vilab/text-to-video-ms-1.7b"
+  enable_memory_efficient_attention: False
+  enable_sequential_cpu_offload: False
+  enable_attention_slicing: False
+  enable_channels_last_format: False
+  guidance_scale: 100.
+  grad_clip: null
+  half_precision_weights: True
+
+  min_step_percent: 0.02
+  max_step_percent: 0.98
+  max_step_percent_annealed: 0.5
+  anneal_start_step: null
+
+  use_sjc: False
+  var_red: True
+  weighting_strategy: "sds"
+
+  view_dependent_prompting: True
+
+  low_ram_vae: -1 ## set to a positive integer (the number of frames with gradient) if hope to use this
