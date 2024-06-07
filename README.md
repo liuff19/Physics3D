@@ -3,7 +3,7 @@ Official implementation of Physics3D: Learning Physical Properties of 3D Gaussia
 
 [Fangfu Liu](https://liuff19.github.io/), Hanyang Wang, [Shunyu Yao](https://scholar.google.com/citations?user=i4kyLbwAAAAJ), Shengjun Zhang, [Jie Zhou](https://scholar.google.com/citations?user=6a79aPwAAAAJ), [Yueqi Duan](https://duanyueqi.github.io/)
 
-## [Paper]() | [Project page](https://liuff19.github.io/Physics3D/) | [Data](https://1drv.ms/f/s!At4g_orSPJVNiFqjfZdl2itnNmyb?e=IZjM2w)
+## [Paper](./assets/Physics3D.pdf) | [Project page](https://liuff19.github.io/Physics3D/) | [Data](https://1drv.ms/f/s!At4g_orSPJVNiFqjfZdl2itnNmyb?e=IZjM2w)
 
 <p align="center">
     <img src="assets/teaser.png">
