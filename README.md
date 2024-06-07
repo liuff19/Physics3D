@@ -1,9 +1,9 @@
 # Physics3D
 Official implementation of Physics3D: Learning Physical Properties of 3D Gaussians via Video Diffusion
 
-[Fangfu Liu](https://liuff19.github.io/), Hanyang Wang, [Shunyu Yao](https://scholar.google.com/citations?user=i4kyLbwAAAAJ), Shengjun Zhang, [Jie Zhou](https://scholar.google.com/citations?user=6a79aPwAAAAJ), [Yueqi Duan](https://duanyueqi.github.io/)
+[Fangfu Liu](https://liuff19.github.io/), [Hanyang Wang](https://hanyang-21.github.io/), [Shunyu Yao](https://scholar.google.com/citations?user=i4kyLbwAAAAJ), Shengjun Zhang, [Jie Zhou](https://scholar.google.com/citations?user=6a79aPwAAAAJ), [Yueqi Duan](https://duanyueqi.github.io/)
 
-## [Paper](./assets/Physics3D.pdf) | [Project page](https://liuff19.github.io/Physics3D/) | [Data](https://1drv.ms/f/s!At4g_orSPJVNiFqjfZdl2itnNmyb?e=IZjM2w)
+## [Paper](https://arxiv.org/abs/2406.04338) | [Project page](https://liuff19.github.io/Physics3D/) | [Data](https://1drv.ms/f/s!At4g_orSPJVNiFqjfZdl2itnNmyb?e=IZjM2w)
 
 <p align="center">
     <img src="assets/teaser.png">
@@ -72,6 +72,14 @@ We have also used open-source datasets from the following repositories.
 
 If you found Physics3D helpful, please cite our report:
 ```bibtex
+@misc{liu2024physics3d,
+      title={Physics3D: Learning Physical Properties of 3D Gaussians via Video Diffusion}, 
+      author={Fangfu Liu and Hanyang Wang and Shunyu Yao and Shengjun Zhang and Jie Zhou and Yueqi Duan},
+      year={2024},
+      eprint={2406.04338},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
 ```
 
 ## Contact
