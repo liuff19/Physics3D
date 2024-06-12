@@ -72,13 +72,11 @@ We have also used open-source datasets from the following repositories.
 
 If you found Physics3D helpful, please cite our report:
 ```bibtex
-@misc{liu2024physics3d,
-      title={Physics3D: Learning Physical Properties of 3D Gaussians via Video Diffusion}, 
-      author={Fangfu Liu and Hanyang Wang and Shunyu Yao and Shengjun Zhang and Jie Zhou and Yueqi Duan},
-      year={2024},
-      eprint={2406.04338},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@article{liu2024physics3d,
+  title={Physics3D: Learning Physical Properties of 3D Gaussians via Video Diffusion},
+  author={Liu, Fangfu and Wang, Hanyang and Yao, Shunyu and Zhang, Shengjun and Zhou, Jie and Duan, Yueqi},
+  journal={arXiv preprint arXiv:2406.04338},
+  year={2024}
 }
 ```
 
