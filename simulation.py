@@ -504,23 +504,23 @@ if __name__ == "__main__":
         grad = wp.to_torch(mpm_solver.mpm_model.E.grad)
         max_grad, min_grad = torch.max(grad), torch.min(grad)
         grad = (grad - min_grad) / (max_grad - min_grad) - 0.5 if max_grad - min_grad != 0 else torch.zeros_like(grad)
-        wp.launch(update_param, mpm_solver.n_particles, [mpm_solver.mpm_model.E, wp.from_torch(grad), 1.0, 2])
+        wp.launch(update_param, mpm_solver.n_particles, [mpm_solver.mpm_model.E, wp.from_torch(grad), 1.0, -0.4])
         
         # add
         grad_mu_N = wp.to_torch(mpm_solver.mpm_model.mu_N.grad)
         max_grad, min_grad = torch.max(grad_mu_N), torch.min(grad_mu_N)
         grad_mu_N = (grad_mu_N - min_grad) / (max_grad - min_grad) - 0.5 if max_grad - min_grad != 0 else torch.zeros_like(grad_mu_N)
-        wp.launch(update_param, mpm_solver.n_particles, [mpm_solver.mpm_model.mu_N, wp.from_torch(grad_mu_N), 1.0, 2.0])
+        wp.launch(update_param, mpm_solver.n_particles, [mpm_solver.mpm_model.mu_N, wp.from_torch(grad_mu_N), 1.0, 1.0])
         
         grad_lam_N = wp.to_torch(mpm_solver.mpm_model.lam_N.grad)
         max_grad, min_grad = torch.max(grad_lam_N), torch.min(grad_lam_N)
         grad_lam_N = (grad_lam_N - min_grad) / (max_grad - min_grad) - 0.5 if max_grad - min_grad != 0 else torch.zeros_like(grad_lam_N)
-        wp.launch(update_param, mpm_solver.n_particles, [mpm_solver.mpm_model.lam_N, wp.from_torch(grad_lam_N), 1.0, 2.0])
+        wp.launch(update_param, mpm_solver.n_particles, [mpm_solver.mpm_model.lam_N, wp.from_torch(grad_lam_N), 1.0, 1.0])
         
         grad_viscosity = wp.to_torch(mpm_solver.mpm_model.viscosity.grad)
         max_grad, min_grad = torch.max(grad_viscosity), torch.min(grad_viscosity)
         grad_viscosity = (grad_viscosity - min_grad) / (max_grad - min_grad) - 0.5 if max_grad - min_grad != 0 else torch.zeros_like(grad_viscosity)
-        wp.launch(update_param, mpm_solver.n_particles, [mpm_solver.mpm_model.viscosity, wp.from_torch(grad_viscosity), 1.0, 3.0])
+        wp.launch(update_param, mpm_solver.n_particles, [mpm_solver.mpm_model.viscosity, wp.from_torch(grad_viscosity), 1.0, 2.0])
         
         print("grad: ", torch.mean(grad), torch.max(wp.to_torch(mpm_solver.mpm_model.E.grad)), torch.min(wp.to_torch(mpm_solver.mpm_model.E.grad)))
         print("grad_mu_N: ", torch.mean(grad_mu_N), torch.max(wp.to_torch(mpm_solver.mpm_model.mu_N.grad)), torch.min(wp.to_torch(mpm_solver.mpm_model.mu_N.grad)))

@@ -484,7 +484,7 @@ def compute_stress_from_F_trial(
             epsilon_N = A * (epsilon_trial - B * trace_epsilon_trial_vec)
             sig_new = wp.vec3(wp.exp(epsilon_N[0]), wp.exp(epsilon_N[1]), wp.exp(epsilon_N[2]))
             state.particle_F_N[p] = U_N * wp.diag(sig_new) * wp.transpose(V_N)
-            state.particle_F[p] = state.particle_F_trial[p] #+ state.particle_F_N[p] # add # ???
+            state.particle_F[p] = state.particle_F_trial[p] #+ state.particle_F_N[p] # add
 
         # also compute stress here
         J = wp.determinant(state.particle_F[p])
@@ -499,7 +499,7 @@ def compute_stress_from_F_trial(
                 state.particle_F[p], U, V, J, model.mu[p], model.lam[p]
             )
             tau_N = 2.0 * model.mu_N[p] * epsilon_N + model.lam_N[p] * trace_epsilon_trial_vec
-            stress = stress + U_N * wp.diag(tau_N) * wp.transpose(V_N) # ???
+            stress = stress + U_N * wp.diag(tau_N) * wp.transpose(V_N)
         if model.material == 5:
             stress = kirchoff_stress_FCR(
                 state.particle_F[p], U, V, J, model.mu[p], model.lam[p]
